@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      h2 {
+        color: red;
+        text-align: center;
+        background-color: yellow;
+        font-size: 50px;
+      }
+      .head1 {
+        color: green;
+        text-align: center;
+        background-color: blue;
+        font-size: 50px;
+      }
+      #head2 {
+        color: white;
+        text-align: center;
+        background-color: black;
+        font-size: 70px;
+      }
+      * {
+        color: white;
+        text-align: center;
+        background-color: rgb(0, 0, 0);
+        font-size: 70px;
+      }
+      body {
+        background-image: linear-gradient(red, blue);
+      }
+      h1[category="ss"] {
+        font-style: italic;
+      }
+    </style>
+    <link rel="stylesheet" href="./mystyle.css" />
+  </head>
+  <body>
+    <!--
+        Cascading Style Sheets;
+
+        Structurs:
+            - Selector{
+                attribute:value;
+            }
+            - Selector:elements in which CSS is being applied
+            - attribute:property of elements that need to be changed
+            - Value:value of the attribute
+
+            Types:
+            1:Internal CSS:
+            CSS is written inside HEad element of same webpage inside <style> tag.
+            2:External CSS
+            CSS is written in a separate file and linked to the HTML file using <link> tag.
+            no style keyword is required
+            3:Inline CSS
+            style is written within same tag where style is necessary
+
+            Selector Types
+            1.Element Selector
+            tag name is used to apply CSS
+
+            2.Class Selector
+            user defined class name is used to apply CSS
+            while applying css, we use dot(.)
+
+            3.ID Selector
+            user defined ID name is used to apply CSS
+            while applying css, we use hash(#)
+            only 1 ID is allowed i one element
+
+           Priority: ID > CLASS > Element
+
+           Universal Selector:*
+              applies to all elements
+            Attribute Selector:
+                applies to all elements with a specific attribute
+                
+
+
+    -->
+    <h1 style="color: aqua; background-color: black">Heading1</h1>
+    <h2 class="head1">Heading</h2>
+    <h2>Heading</h2>
+    <h2>Heading</h2>
+    <h2 id="head2">Heading</h2>
+    <h1 category="ss">Heading</h1>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse voluptatum
+      obcaecati inventore magnam, aperiam repudiandae cum ab repellat ad ea odit
+      doloremque, corrupti voluptate suscipit optio, non officiis. Eveniet,
+      voluptate?
+    </p>
+  </body>
+</html>

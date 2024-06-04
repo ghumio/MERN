@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Box Model</title>
+    <style>
+      :root {
+        font-size: 20px;
+        font-family: "Courier New", Courier, monospace;
+      }
+      * {
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      .demo {
+        height: 300px;
+        width: 300px;
+        background-color: aquamarine;
+
+        /* margin */
+        /* individual margin */
+
+        /* margin-top: 15px;
+        margin-left: 25px;
+        margin-bottom: 20px;
+        margin-right: 30px;
+
+        /* 4 sides */
+        /* margin: 10px; */
+
+        /* top,bottom left,right */
+        /* margin: 10px 50px; */
+
+        /* top left,right bottom */
+        /* margin: 20px 50px 50px; */
+
+        /* top right bottom left */
+        /* margin: 10px 20px 30px 40px; */
+
+        margin: auto;
+      }
+
+      .demo2 {
+        /* height: 300px; */
+        width: 300px;
+        background-color: blueviolet;
+        margin: auto;
+        font-size: 24px;
+        text-align: justify;
+
+        /* individual sides */
+        /* padding-left: 10px;
+        padding-right: 20px;
+        padding-top: 30px;
+        padding-bottom: 40px; */
+
+        /* 4 sides */
+        /* padding: 20px; */
+
+        /* top,bottom left,right */
+        /* padding: 20px 20px; */
+
+        /* top left,right bottom */
+        /* padding: 10px 10px 10px; */
+
+        /* top right bottom left */
+        /* padding: 10px 10px 10px 10px; */
+
+        color: beige;
+
+        /* border-color: rgb(36, 53, 68);
+        border-width: 10px;
+        border-style: dashed; */
+        /* solid dotted dashed double ridge inset outset groove */
+
+        /*  */
+        border: green 5px solid;
+        border-top: gray dashed 9px;
+        border-left: 25px magenta dotted;
+        border-right-color: black;
+        border-bottom-style: groove;
+
+        border-radius: 25px;
+        border-top-right-radius: 50%;
+        border-end-end-radius: 75%;
+
+        /* border-radius: 50%; */
+      }
+      div {
+        font-size: 1.2em;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="demo"></div>
+    <div class="demo2">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, dolores
+      harum sunt est vitae, totam laborum aspernatur cumque eaque fuga inventore
+      alias earum quibusdam! Impedit omnis hic repellat ea non? lore
+    </div>
+
+    <!-- 
+      Units-
+             
+        absolute
+        px-pixels
+        pt-points
+        in-inch
+        cm-centimeters
+
+      relative
+        %-percentage
+        vw-viewport width
+        vh-viewport height
+
+      1em-emphemeral unit = 16px
+      1rem-root em = 16px
+
+      fr-fractional units(grids)
+     -->
+    <div>
+      1.2em
+      <div>
+        1.2em
+        <div>1.2em</div>
+      </div>
+    </div>
+  </body>
+</html>

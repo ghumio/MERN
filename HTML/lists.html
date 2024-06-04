@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 
+        list - 2 types
+            1. ordered list
+                - <ol> tag
+                - <li> tag
+                type:1 2 3,a b c,A,i,I
+                start:
+                eg:process,direction,method
+            2. unordered list
+                - <ul> tag
+                - <li> tag
+                type:disc,square,circle
+     -->
+    <!-- <ul style="list-style:circle;"> -->
+    <ul type="disc">
+      <li>
+        item
+        <ul>
+          <li>
+            item
+            <ul>
+              <li>itema</li>
+              <li>item</li>
+              <li>item</li>
+              <li>item</li>
+            </ul>
+          </li>
+          <li>item</li>
+          <li>item</li>
+          <li>item</li>
+        </ul>
+      </li>
+      <li>item</li>
+      <li>item</li>
+      <li>item</li>
+      <li>item</li>
+    </ul>
+    <ol type="A">
+      <li>items
+        <ol>
+            <li>items
+                <ol start="3" type="A">
+                <li>items</li>
+                <li>items</li>
+                <li>items</li>
+                <li>items</li>
+                </ol>
+            </li>
+            <li>items</li>
+            <li>items</li>
+            <li>items</li>
+        </ol>
+      </li>
+      <li>items</li>
+      <li>items</li>
+      <li>items</li>
+      <li>items</li>
+    </ol>
+
+    <ol>
+        <li>Milk
+            <ol type="A">
+                <li>Cow Milk</li>
+                <li>Buffalo Milk</li>
+            </ol>
+        </li>
+        <li>Tea
+            <ol type="i">
+                <li>Green Tea
+                    <ol type="I">
+                        <li>Japanese Green Tea</li>
+                        <li>Chinese Green Tea</li>
+                        <li>Srilankan/Ceylon Green Tea/li>
+
+                    </ol>
+                </li>
+                <li>Regular Tea
+                    <ol start="3">
+                        <li>Japanese Green Tea</li>
+                        <li>Chinese Green Tea</li>
+                        <li>Srilankan/Ceylon Green Tea/li>
+                    </ol>
+                </li>
+            </ol>
+        </li>
+        <li>Coffee
+            <ol type="a">
+                <li>Cold Coffee</li>
+                <li>Regular Coffee</li>
+            </ol>
+        </li>
+    </ol>
+  </body>
+</html>

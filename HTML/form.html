@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form>
+      <!-- 
+            get-to get information/data from server
+            eg:search
+            data is passed using url
+            not secure
+            data size is limited
+            default
+
+            post-to send information/data to server
+            eg:login, messaging, register
+            data is passed using request body of form
+            secure
+            data size is unlimited
+         -->
+      <table>
+        <tr>
+          <td>First Name</td>
+          <td><input type="text" name="first_name" /></td>
+        </tr>
+        <tr>
+          <td>Last Name</td>
+          <td><input type="text" name="last_name" /></td>
+        </tr>
+      </table>
+
+      <label for="hello">NAME</label>
+      <input
+        type="text"
+        id="hello"
+        name="first_name"
+        placeholder="Enter your name here"
+        required
+        value="Ram"
+        maxlength="13"
+        minlength="5"
+        size="50"
+      />
+
+      <br />
+
+      <label for="dob">Date of Birth</label>
+      <input
+        type="date"
+        id="dob"
+        name="dob"
+        value="2024-05-02"
+        max="2026-01-01"
+        min="2020-01-01"
+      />
+
+      <br />
+
+      <label for="age">Age</label>
+      <input
+        type="number"
+        id="age"
+        value="18"
+        min="18"
+        max="50"
+        placeholder="Enter your age"
+      />
+
+      <br />
+
+      <fieldset>
+        <legend>Login Information</legend>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required />
+
+        <br />
+
+        <label for="pass">Password</label>
+        <input
+          type="password"
+          id="pass"
+          name="pass"
+          required
+          maxlength="30"
+          min="6"
+        />
+
+        <br />
+      </fieldset>
+
+      <label for="">Hobby</label>
+      <input
+        type="checkbox"
+        id="read"
+        name="hobby"
+        value="a"
+        checked
+        disabled
+      />
+      <label for="read">READING BOOKS</label>
+      <input type="checkbox" id="tra" name="hobby" value="#s" />
+      <label for="tra">Travelling</label>
+      <input type="checkbox" id="game" name="hobby" value="d" />
+      <label for="game">Games</label>
+
+      <br />
+
+      <label for="">Gender</label>
+      <input type="radio" value="m" name="gender" id="male" /><label for="male"
+        >MALE</label
+      >
+      <input type="radio" value="f" name="gender" id="female" /><label
+        for="female"
+        >FEMALE</label
+      >
+      <input type="radio" value="o" name="gender" id="other" /><label
+        for="other"
+        >OTHERS</label
+      >
+
+      <br />
+      <label for="address">Address</label>
+      <select name="add" id="address">
+        <option value="" disabled selected>Select your city</option>
+        <option value="ktm">Kathmandu</option>
+        <option value="bkt">Bhaktapur</option>
+        <option value="lal">Lalitpur</option>
+      </select>
+
+      <br />
+
+      <label for="pic">Photo</label>
+      <input type="file" />
+
+      <br />
+      <label for="desc">Description</label>
+      <textarea
+        name="about"
+        id="desc"
+        minlength="10"
+        rows="5"
+        cols="25"
+      ></textarea>
+
+      <br />
+
+      <input type="search" />
+      <input type="color" name="color" />
+      <input type="range" name="range" />
+
+      <br />
+
+      <input type="submit" />
+      <input type="button" value="Register" />
+      <button>Submit</button>
+
+      <input type="reset" />
+    </form>
+  </body>
+</html>
