@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Combinators</title>
+    <style>
+      .demo h1,
+      .demo div {
+        color: black;
+        background-color: blue;
+      }
+
+      h1,
+      h2,
+      p,
+      li,
+      .first {
+        color: green;
+      }
+
+      .demo > h1 {
+        text-align: right;
+      }
+
+      h1 ~ p {
+        text-transform: uppercase;
+      }
+
+      h1 + p {
+        background-color: brown;
+      }
+      h1:hover {
+        color: aquamarine;
+        font-size: 60px;
+      }
+      a:link {
+        color: green;
+      }
+      a:visited {
+        color: gray;
+      }
+      a:hover {
+        color: yellow;
+      }
+      a:active {
+        color: red;
+      }
+      input:focus {
+        background-color: hotpink;
+      }
+      li:first-child {
+        background-color: yellow;
+      }
+      li:nth-child(3) {
+        background-color: purple;
+      }
+      li:nth-child(even) {
+        text-align: center;
+      }
+    </style>
+  </head>
+  &lt; &gt;
+  <body>
+    <ul>
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+      <li>5</li>
+    </ul>
+    <input type="text" />
+    <a href="#">Click me</a>
+    <a href="#first">Click me</a>
+    <a href="#second">Click me</a>
+
+    <!-- <h1>HEading</h1>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam quod ab
+      vel. Rem in deleniti dolor a, ab saepe modi expedita. Voluptatum
+      repudiandae aliquam recusandae magnam ut eligendi labore placeat?
+    </p>
+    <li>List items</li>
+    <p class="first">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia praesentium
+      doloribus voluptates beatae facere, ullam doloremque, neque dolorum a
+      tempore aut ipsam! Eum repudiandae id dolore architecto dolores reiciendis
+      illo.
+    </p>
+
+    <div class="demo">
+      <h1>Heading</h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et
+        voluptatibus tempore eius explicabo qui architecto doloribus ad commodi?
+        Dolorum non architecto alias sapiente fugiat esse vero quidem culpa,
+        pariatur enim.
+      </p>
+      <div>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur
+          facilis fuga saepe ipsa excepturi quidem ad possimus necessitatibus
+          perferendis maiores minus vero repellat, facere omnis quia non sequi
+          ab debitis?
+        </p>
+      </div>
+      <h1>Child</h1>
+    </div> -->
+
+    <!-- 
+    Precedence
+    Combinators:
+        1.Grouping Selectors:
+            we use comma(,) to group multiple selectors to apply CSS
+        2.Descendent Selectors
+            we use space ( ) to apply CSS to the descending elements
+        3.Child Selectors
+            immediate descendts are child elements
+            to apply CSS to chils, we use greater than (>) symbols
+        4.General Siblings:
+            to apply CSS to the following elements, we use tilde(~) symbol
+        5.Adjacent Sibling
+            immediately following sibling element we use plus (+) to demote adjacent sibling
+
+    Pseudclass:
+        :hover - mouse over
+        :active - mouse click
+
+        :link
+        :visited
+
+        :focus
+
+        :first-child
+        :last-child
+        :nth-child(3)
+        :nth-child(even)
+        :nth-child(odd)
+
+    -->
+  </body>
+</html>
