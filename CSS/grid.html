@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid</title>
+    <style>
+      * {
+        margin: 0;
+      }
+      .container {
+        display: grid;
+        /* grid-template-rows: 30px 30px 30px; */
+        /* grid-template-columns: auto auto auto; */
+        /* grid-template-columns: 1fr 4fr 1fr 1fr; */
+        grid-template-columns: 10vw repeat(2, 20vw) 50vw;
+        align-items: center;
+        text-align: center;
+      }
+      .para {
+        /* grid-column-start: 1;
+        grid-column-end: 5;
+        grid-row-start: 3;
+        grid-row-end: 5; */
+        /* grid-column: 2/4;
+        grid-row: 3/5; */
+        grid-area: 3/2/5/4;
+        /* rowstart/columnstart/rowend/columnend */
+        background-color: aliceblue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item1">1</div>
+      <div class="item1">2</div>
+      <div class="item1">3</div>
+      <div class="item1">4</div>
+      <div class="item1">5</div>
+      <p class="para">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae
+        porro nulla hic iure pariatur vel dignissimos corrupti aliquid
+      </p>
+      <img
+        src="./images/web-design-technology-browsing-programming-concept_53876-163260.avif"
+        alt=""
+        style="height: 100px; width: 100px"
+      />
+      <!-- <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste at
+        repellat illum recusandae voluptatum? Alias pariatur quidem hic,
+      </p> -->
+      <span>6</span>
+      <span>7</span>
+      <span>8</span>
+      <span>9</span>
+    </div>
+  </body>
+</html>

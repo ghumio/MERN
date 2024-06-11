@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid Layout</title>
+    <style>
+      * {
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        display: grid;
+        grid-template-columns: 1fr 3fr 3fr;
+        grid-template-rows: 8vh 42vh 42vh 8vh;
+      }
+      .logo {
+        background-color: aqua;
+      }
+      .menu {
+        background-color: aquamarine;
+        /* grid-row-start: 1;
+        grid-row-end:2
+        grid-column-start: 2;
+        grid-column-end: 4; */
+        grid-area: 1/2/2/4;
+
+        /* display: flex;
+        justify-content: space-evenly;
+        list-style: none; */
+
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        list-style: none;
+        align-items: center;
+      }
+      .leftsidebar {
+        background-color: bisque;
+        grid-row-start: 2;
+        grid-row-end: 4;
+      }
+      .footer {
+        background-color: red;
+        grid-column-start: 1;
+        grid-column-end: 4;
+      }
+      .topmain {
+        background-color: purple;
+        grid-area: 2/2/3/4;
+      }
+      .bottomleft {
+        background-color: burlywood;
+        grid-area: 3/2;
+      }
+      .bottomright {
+        background-color: brown;
+        grid-area: 3/3;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="logo">LOGO</div>
+      <div class="leftsidebar">Left Sidebar</div>
+      <div class="footer">Footer</div>
+      <ul class="menu">
+        <li>Home</li>
+        <li>About</li>
+        <li>Gallery</li>
+        <li>Blogs</li>
+        <li>Contact</li>
+      </ul>
+      <div class="topmain">Top Main</div>
+      <div class="bottomleft">Bottom Left</div>
+      <div class="bottomright">Bottom Right</div>
+    </div>
+  </body>
+</html>
