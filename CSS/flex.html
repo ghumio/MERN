@@ -3,68 +3,98 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>css intro</title>
     <style>
-      * {
-        box-sizing: border-box;
-      }
-      .container {
-        height: 80vh;
-        width: 100vw;
-        background-color: grey;
+      body {
         display: flex;
-        /* justify-content: space-between; */
-        padding: 20px;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        color: orange;
+      }
+
+      .container {
+        background-color: gray;
+        height: 500px;
+        width: 100%;
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+      }
+      .left_div {
+        height: 400px;
+        width: 300px;
+        background-color: red;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .right_div {
+        height: 400px;
+        width: 300px;
+        display: flex;
+        flex-direction: column;
         gap: 20px;
       }
-      .one {
-        background-color: brown;
-        width: 40%;
-      }
-      .right {
-        background-color: aqua;
-        width: 60%;
+      .three {
+        height: 200px;
+        width: 100%;
+        /* background-color: blue; */
+        display: flex;
+        gap: 20px;
       }
       .two {
-        height: 50%;
+        height: 200px;
+        width: 100%;
         background-color: blueviolet;
-      }
-      .bottom {
         display: flex;
-        height: 50%;
-        padding: 20px;
+        justify-content: center;
+        align-items: center;
       }
-      .three {
+      .another {
+        height: 100%;
         width: 50%;
-        background-color: chartreuse;
+        background-color: brown;
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
       .four {
-        background-color: chocolate;
+        height: 100%;
         width: 50%;
-        /* padding: ; */
+        /* background-color: aqua; */
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
       }
-      .four_a {
-        width: 100%;
+      .four_4a {
         height: 50%;
-        background-color: skyblue;
+        background-color: blanchedalmond;
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
-      four_b {
-        /* width: 100%; */
+      .four_4b {
         height: 50%;
-        background-color: maroon;
+        background-color: blue;
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
     </style>
   </head>
+
   <body>
     <div class="container">
-      <div class="one">1</div>
-      <div class="right">
+      <div class="left_div">1</div>
+      <div class="right_div">
         <div class="two">2</div>
-        <div class="bottom">
-          <div class="three">3</div>
+        <div class="three">
+          <div class="another">3</div>
           <div class="four">
-            <div class="four_a">4a</div>
-            <div class="four_b">4b</div>
+            <div class="four_4a">4a</div>
+            <div class="four_4b">4b</div>
           </div>
         </div>
       </div>
