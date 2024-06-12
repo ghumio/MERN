@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transformation</title>
+    <style>
+      body {
+        perspective: 1200px;
+      }
+      .demo {
+        justify-content: center;
+        align-items: center;
+        height: 300px;
+        width: 300px;
+        background-color: aqua;
+        transition: 3s;
+        /* transform-origin: right; */
+        border-radius: 50%;
+        /* border-left: 15px solid red; */
+        box-shadow: inset 20px 20px 20px, inset 20px 20px 20px gray,
+          inset -20px -20px 20px grey;
+        animation-name: anim1;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-timing-function: linear;
+        animation-fill-mode: forwards;
+      }
+      @keyframes anim1 {
+        /* from {
+          background-color: red;
+        } */
+        25% {
+          background-color: green;
+        }
+        50% {
+          transform: rotate(360deg);
+        }
+        100% {
+          transform: rotate(-360deg);
+          background-color: yellow;
+        }
+        /* to {
+          transform: rotate(360deg);
+        } */
+      }
+      .demo:hover {
+        /* transformation:change in location, orientation,size,shape
+        translate:change in location
+            translate(x-distance,y-distance)
+            translateX(x-distance)
+            translateY(y-distance)
+         */
+
+        /* transform: translate(-50px, -50px); */
+        /* transform: translate(50px); */
+
+        /* 
+        rotate:change in orientation
+        */
+
+        /* transform: rotatex(360deg) rotatey(180deg) translate(50px, 50px); */
+        /* 
+        scale-change in size
+        1-normal
+        >1-enlarge
+        <1-reduce
+        */
+        /* transform: scale(1.2); */
+        /* transform: scalex(1.3); */
+
+        /* 
+        skew:change in shape
+        */
+        /* transform: skew(50deg, 50deg); */
+        /* animation-play-state: paused; */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="demo">HELLO WORLD</div>
+  </body>
+</html>
