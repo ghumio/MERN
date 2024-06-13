@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Media Query</title>
+    <style>
+      .demo {
+        height: 300px;
+        width: 300px;
+        background-color: bisque;
+      }
+
+      /* @media screen and (max-width: 500px) {
+
+        .demo {
+          background-color: red;
+          width: 400px;
+        }
+      }
+      @media screen and (min-width: 500px) {
+        .demo {
+          background-color: aqua;
+        }
+      }
+      @media screen and (min-width: 720px) {
+        .demo {
+          background-color: rgb(98, 0, 255);
+        }
+      }
+      @media screen and (min-width: 900px) {
+        .demo {
+          background-color: purple;
+        }
+      } */
+
+      @media screen and (min-width: 1200px) {
+        .demo {
+          background-color: red;
+        }
+      }
+      @media screen and (max-width: 1200px) {
+        .demo {
+          background-color: green;
+        }
+      }
+      @media screen and (max-width: 900px) {
+        .demo {
+          background-color: blue;
+        }
+      }
+      @media screen and (max-width: 720px) {
+        .demo {
+          background-color: blueviolet;
+        }
+      }
+      @media screen and (max-width: 500px) {
+        .demo {
+          background-color: orange;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="demo"></div>
+  </body>
+</html>

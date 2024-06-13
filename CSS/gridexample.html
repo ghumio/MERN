@@ -56,6 +56,59 @@
         background-color: brown;
         grid-area: 3/3;
       }
+      @media screen and (max-width: 600px) {
+        .container {
+          grid-template-columns: 100%;
+          grid-template-rows: auto;
+        }
+        .logo {
+          text-align: center;
+          color: yellowgreen;
+          padding: 15px 0;
+        }
+        .menu {
+          grid-row: 2;
+          grid-column: 1;
+          height: 8vh;
+        }
+        .leftsidebar {
+          grid-row: 3;
+          grid-column: 1;
+          height: 20vh;
+          text-align: center;
+        }
+        .topmain {
+          grid-row: 4;
+          grid-column: 1;
+          height: 20vh;
+          text-align: center;
+        }
+        .bottomleft {
+          grid-row: 5;
+          grid-column: 1;
+          height: 20vh;
+          text-align: center;
+        }
+        .bottomright {
+          grid-row: 6;
+          grid-column: 1;
+          height: 20vh;
+          text-align: center;
+        }
+        .footer {
+          grid-row: 7;
+          grid-column: 1;
+          height: 10vh;
+          text-align: center;
+        }
+        .menu {
+          height: auto;
+          display: grid;
+          grid-template-columns: auto;
+          text-align: center;
+          padding: 10px;
+        }
+      }
     </style>
   </head>
   <body>
