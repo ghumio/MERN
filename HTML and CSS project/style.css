@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.header {
+  min-height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 7)),
+    url(./images/kec.jpg);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+.img {
+  height: 150px;
+  width: 150px;
+  padding: 10px 10px;
+  background: transparent;
+}
+nav {
+  display: flex;
+  padding: 2%, 6%;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-links {
+  flex: 1;
+  text-align: right;
+}
+.nav-links ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 6px 12px;
+  position: relative;
+}
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 13px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.nav-links ul li::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: #f44336;
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+}
+.nav-links ul li:hover::after {
+  width: 100%;
+}
+.textbox {
+  width: 90%;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  text-align: center;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.textbox h1 {
+  font-size: 62px;
+}
+.textbox p {
+  margin: 10px 0 40px;
+  font-size: 14px;
+  color: #fff;
+}
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  color: whitesmoke;
+  border: 1px solid white;
+  padding: 12px 34px;
+  font-size: 25px;
+  background: transparent;
+  position: relative;
+  cursor: pointer;
+}
+.btn:hover {
+  border: 1px solid #f44336;
+  transition: 1s;
+  background: #f44336;
+}
+.close-icon,
+.menu-icon {
+  display: none;
+}
+#menu-toggle {
+  display: none;
+}
+.menu-icon {
+  display: none;
+}
+
+@media screen and (max-width: 700px) {
+  .textbox h1 {
+    font-size: 20px;
+  }
+  .nav-links ul li {
+    display: block;
+  }
+  .nav-links {
+    position: absolute;
+    background: rgb(58, 61, 53);
+    height: 100vh;
+    width: 200px;
+    top: 0;
+    right: -200px;
+    text-align: left;
+    z-index: 2;
+  }
+  .close-icon,
+  .menu-icon {
+    display: block;
+    color: rgb(158, 152, 165);
+    margin: 10px;
+    font-size: 22px;
+    cursor: pointer;
+  }
+  .nav-links ul {
+    padding: 30px;
+    /* text-align: center; */
+  }
+  .close-icon,
+  .nav-links {
+    display: none;
+  }
+  #menu-toggle:checked ~ .menu-icon {
+    display: none;
+  }
+  #menu-toggle:checked ~ .close-icon,
+  #menu-toggle:checked ~ .nav-links {
+    display: none;
+  }
+}

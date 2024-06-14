@@ -4,6 +4,84 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+      :root{
+        --myvar:#faaabb;
+      }
+      * {
+        margin: 0;
+        box-sizing: border-box;
+      }
+      form {
+        background-color: var(--myvar);
+        width: 50%;
+        margin: auto;
+        margin-top: 50px;
+        padding: 25px;
+        border-radius: 25px;
+        box-shadow: 0 0 10px 10px green;
+      }
+      label {
+        width: 25%;
+        display: inline-block;
+      }
+      input[type="text"],
+      input[type="date"],
+      input[type="email"],
+      input[type="password"],
+      input[type="number"],
+      select,
+      input[type="file"],
+      textarea,
+      .gender-div {
+        width: 73%;
+        padding: 5px 15px;
+        margin: 2px 0;
+        border-radius: 5px;
+        border: 0;
+        outline: 0;
+        resize: none;
+      }
+      .gender-div {
+        padding: 0;
+        display: inline-flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+      }
+      .gender-div label {
+        display: inline;
+      }
+      .btn-div{
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+      }
+      button,input[type="submit"],input[type="reset"],input[type="button"]{
+        padding:5px  15px;
+        border-radius: 5px;
+        border: 2px solid grey;
+        box-shadow: 0 5px 5px grey;
+      }
+      button:hover{
+        cursor: pointer;
+        border: 5px solid grey;
+        box-shadow: 0 7px 5px black;
+        background-color: gray;
+        color: white;
+      }
+      button:active{
+        transform: scale(1.5);
+        box-shadow: 0 3px 5px gray;
+        background-color: aqua;
+        color: antiquewhiteSW;
+      }
+      form:hover{
+        cursor: pointer;
+      }
+      input:focus{
+        background-color: beige;
+      }
+    </style>
   </head>
   <body>
     <form>
@@ -21,7 +99,7 @@
             secure
             data size is unlimited
          -->
-      <table>
+      <!-- <table>
         <tr>
           <td>First Name</td>
           <td><input type="text" name="first_name" /></td>
@@ -30,7 +108,7 @@
           <td>Last Name</td>
           <td><input type="text" name="last_name" /></td>
         </tr>
-      </table>
+      </table> -->
 
       <label for="hello">NAME</label>
       <input
@@ -45,8 +123,6 @@
         size="50"
       />
 
-      <br />
-
       <label for="dob">Date of Birth</label>
       <input
         type="date"
@@ -56,8 +132,6 @@
         max="2026-01-01"
         min="2020-01-01"
       />
-
-      <br />
 
       <label for="age">Age</label>
       <input
@@ -69,59 +143,69 @@
         placeholder="Enter your age"
       />
 
-      <br />
+      <!-- <fieldset> -->
+      <!-- <legend>Login Information</legend> -->
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required />
 
-      <fieldset>
-        <legend>Login Information</legend>
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" required />
-
-        <br />
-
-        <label for="pass">Password</label>
-        <input
-          type="password"
-          id="pass"
-          name="pass"
-          required
-          maxlength="30"
-          min="6"
-        />
-
-        <br />
-      </fieldset>
-
-      <label for="">Hobby</label>
+      <label for="pass">Password</label>
       <input
-        type="checkbox"
-        id="read"
-        name="hobby"
-        value="a"
-        checked
-        disabled
+        type="password"
+        id="pass"
+        name="pass"
+        required
+        maxlength="30"
+        min="6"
       />
-      <label for="read">READING BOOKS</label>
-      <input type="checkbox" id="tra" name="hobby" value="#s" />
-      <label for="tra">Travelling</label>
-      <input type="checkbox" id="game" name="hobby" value="d" />
-      <label for="game">Games</label>
-
-      <br />
 
       <label for="">Gender</label>
-      <input type="radio" value="m" name="gender" id="male" /><label for="male"
-        >MALE</label
-      >
-      <input type="radio" value="f" name="gender" id="female" /><label
-        for="female"
-        >FEMALE</label
-      >
-      <input type="radio" value="o" name="gender" id="other" /><label
-        for="other"
-        >OTHERS</label
-      >
+      <div class="gender-div">
+        <div>
+          <input type="radio" value="m" name="gender" id="male" /><label
+            for="male"
+            >MALE</label
+          >
+        </div>
+        <div>
+          <input type="radio" value="f" name="gender" id="female" /><label
+            for="female"
+            >FEMALE</label
+          >
+        </div>
 
-      <br />
+        <div>
+          <input type="radio" value="o" name="gender" id="other" /><label
+            for="other"
+            >OTHERS</label
+          >
+        </div>
+      </div>
+      <!-- </fieldset> -->
+
+      <label for="">Hobby</label>
+      <div class="gender-div">
+        <div>
+          <input
+            type="checkbox"
+            id="read"
+            name="hobby"
+            value="a"
+            checked
+            disabled
+          />
+          <label for="read">READING BOOKS</label>
+        </div>
+        <div>
+          <input type="checkbox" id="tra" name="hobby" value="#s" />
+          <label for="tra">Travelling</label>
+        </div>
+
+        <div>
+          <input type="checkbox" id="game" name="hobby" value="d" />
+          <label for="game">Games</label>
+        </div>
+      </div>
+
       <label for="address">Address</label>
       <select name="add" id="address">
         <option value="" disabled selected>Select your city</option>
@@ -130,13 +214,10 @@
         <option value="lal">Lalitpur</option>
       </select>
 
-      <br />
-
       <label for="pic">Photo</label>
       <input type="file" />
 
-      <br />
-      <label for="desc">Description</label>
+      <label for="desc" style="vertical-align: top">Description</label>
       <textarea
         name="about"
         id="desc"
@@ -144,20 +225,19 @@
         rows="5"
         cols="25"
       ></textarea>
-
-      <br />
-
-      <input type="search" />
+      
+      <!-- <input type="search" />
       <input type="color" name="color" />
-      <input type="range" name="range" />
+      <input type="range" name="range" /> -->
 
-      <br />
-
-      <input type="submit" />
-      <input type="button" value="Register" />
-      <button>Submit</button>
-
+      
+      <div class="btn-div">
+        <input type="button" value="Register" />
+        <button>Submit</button>
+        <input type="submit" />
       <input type="reset" />
-    </form>
+      </form>
+      </div>
+     
   </body>
 </html>
