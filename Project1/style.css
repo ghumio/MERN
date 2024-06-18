@@ -1,0 +1,234 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+/* Navigation Bar */
+#navbar {
+  display: flex;
+  align-items: center;
+  position: relative;
+  text-align: right;
+}
+#navbar::before {
+  content: "";
+  background-color: black;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.3;
+  top: 0;
+  left: 0;
+}
+.logo h1 {
+  font-size: 2rem;
+  margin: 5px 20px;
+}
+#navbar ul {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 400px;
+}
+
+#navbar ul li {
+  /* color: ; */
+  list-style: none;
+  font-size: 1.3rem;
+}
+#navbar ul li a {
+  color: rgba(21, 22, 22);
+  display: block;
+  padding: 3px 22px;
+  border-radius: 20px;
+  text-decoration: none;
+}
+#navbar ul li a:hover {
+  color: black;
+  background-color: white;
+}
+/* Home Section */
+.bgimage {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url(./images/bg1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  animation: bgchange 20s linear infinite;
+}
+@keyframes bgchange {
+  0% {
+    background-image: url(./images/bg1.jpg);
+  }
+  20% {
+    background-image: url(./images/bg1.jpg);
+  }
+  25% {
+    background-image: url(./images/bg2.jpg);
+  }
+  45% {
+    background-image: url(./images/bg2.jpg);
+  }
+  50% {
+    background-image: url(./images/bg3.jpg);
+  }
+  70% {
+    background-image: url(./images/bg3.jpg);
+  }
+  95% {
+    background-image: url(./images/bg2.jpg);
+  }
+}
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(116, 106, 106, 0.5);
+}
+.content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  color: #dbfcff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 2;
+}
+.content h1 {
+  font-size: 50px;
+  margin-bottom: 0;
+}
+.content p {
+  font-size: 20px;
+  width: 60%;
+  padding-bottom: 10px;
+  text-align: center;
+}
+/* Services */
+.services {
+  margin-top: 50px;
+}
+.services h1,
+.foods h1,
+.client h1 {
+  font-size: 40px;
+  text-align: center;
+}
+.samesize {
+  height: 150px;
+  width: 150px;
+  object-fit: contain;
+  overflow: hidden;
+}
+.box {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 30px;
+  justify-items: center;
+  align-items: center;
+}
+.delivery,
+.combo,
+.bulky-order,
+.healthy {
+  background-color: #f7f7f7;
+  border: 1px solid black;
+  border-radius: 20px;
+  text-align: center;
+  height: auto;
+  width: 200px;
+  cursor: pointer;
+}
+.delivery:hover,
+.combo:hover,
+.bulky-order:hover,
+.healthy:hover {
+  background-color: #f8e9e9;
+  box-shadow: 0px 0px 20px 2px rgb(87, 69, 69);
+  transition: ease 1s;
+  transform: scale(1.1);
+}
+.btn {
+  padding: 6px 20px;
+  border: 2px solid black;
+  border-radius: 20px;
+  font-size: 20px;
+  background-color: rgb(216, 228, 145);
+  color: rgb(37, 4, 4);
+  cursor: pointer;
+  display: block;
+  margin: auto;
+  margin-top: 30px;
+}
+/* Foods Available */
+.foods {
+  margin-top: 30px;
+}
+.i1 {
+  height: 100px;
+  width: 100px;
+  object-fit: cover;
+}
+.foods-available {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  background: #000;
+  /* margin-top: 50px; */
+}
+.photos {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  transform-style: preserve-3d;
+  animation: animate 20s linear infinite;
+}
+@keyframes animate {
+  0% {
+    transform: perspective(1000px) rotateY(0deg);
+  }
+  100% {
+    transform: perspective(1000px) rotateY(360deg);
+  }
+}
+.photos span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80%;
+  height: 100%;
+  transform-origin: center;
+  transform-style: preserve-3d;
+  transform: rotateY(calc(var(--i) * 45deg)) translateZ(400px);
+  -webkit-box-reflect: below 0px
+    linear-gradient(transparent, transparent, #0004);
+}
+.photos span img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+.client {
+  margin-top: 40px;
+}
+.client-item {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 30px;
+  background-image: url(./images/client.jpg);
+}
+.fa-brands {
+  font-size: 50px;
+}
