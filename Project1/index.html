@@ -20,14 +20,16 @@
           <h1>FOODIE HUB</h1>
         </div>
         <ul>
-          <li class="items"><a href="#">Home</a></li>
-          <li class="items"><a href="#">Services</a></li>
+          <li class="items"><a href="#home">Home</a></li>
+          <li class="items"><a href="#services">Services</a></li>
           <li class="items"><a href="#">Menu</a></li>
-          <li class="items"><a href="#">Contact Us</a></li>
+          <li class="items"><a href="#client">Clients</a></li>
+          <li class="items"><a href="#contact">Contact Us</a></li>
+          <li class="items"><a href="../html/home1.html">Branch 1</a></li>
         </ul>
       </nav>
     </header>
-    <section class="home">
+    <section class="home" id="home">
         <div class="bgimage">
       <div class="overlay"></div>
       <div class="content">
@@ -41,7 +43,7 @@
       </div>
     </section>
 <!-- Services -->
- <section class="services">
+ <section class="services" id="services">
   <h1 class="heading">OUR SERVICES</h1>
   <div class="box">
   <div class="delivery">
@@ -68,8 +70,8 @@
   <button class="btn">Order Now</button>
  </section>
   <!-- Food Available -->
-  <section class="foods">
-    <h1>FOOD AVAILABLES<h1>
+  <section class="foods" id="menu">
+    <h1 class="heading">FOOD AVAILABLES<h1>
       <div class="foods-available">
       <div class="photos">
         <span style="--i:1"><img src="./images/piz.jpg" alt="" class="i1"></span>
@@ -83,8 +85,8 @@
       </div>
     </div>
       </section>
-      <section class="client">
-        <h1>OUR CLIENTS</h1>
+      <section class="client" id="client">
+        <h1 class="heading">OUR CLIENTS</h1>
         <div class="client-item">
           <i class="fa-brands fa-apple"></i>
           <i class="fa-brands fa-windows"></i>
@@ -92,7 +94,7 @@
           <i class="fa-brands fa-amazon"></i>
         </div>
       </section>
-      <section class="contact">
+      <!-- <section class="contact">
         <h1>CONTACT US</h1>
         <div class="contact-box">
           <form action="">
@@ -100,6 +102,29 @@
             
           </form>
         </div>
+      </section> -->
+      <section class="testimonials">
+        <h1>TESTIMONIALS</h1>
+        <div class="test">
+          <div class="rating">
+          <i class="fa-solid fa-face-meh"></i>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis, vero? Id sunt odit sequi, porro aliquam eaque tempora iusto </p>
+          <h3>JackSOn</h3>
+        </div>
+        <div class="rating">
+          <i class="fa-solid fa-face-meh"></i>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis, vero? Id sunt odit sequi, porro aliquam eaque tempora iusto </p>
+          <h3>JackSOn</h3>
+        </div>
+        <div class="rating">
+          <i class="fa-solid fa-face-meh"></i>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis, vero? Id sunt odit sequi, porro aliquam eaque tempora iusto </p>
+          <h3>JackSOn</h3>
+        </div>
+      </div>
       </section>
+      <footer class="footer">
+        <h4>Online Food Service|Copyright</h4>
+      </footer>
   </body>
 </html>
