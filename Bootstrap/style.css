@@ -8,3 +8,9 @@ textarea {
   height: 120px !important;
   resize: none;
 }
+table img {
+  height: 100px;
+}
+p {
+  text-align: justify;
+}
