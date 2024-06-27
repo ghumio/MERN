@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+    <!-- BOOTSTRAP CSS CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+
+    <!-- Booststrap icon CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+
+    <!-- favicon -->
+    <link
+      rel="shortcut icon"
+      href="./apple-icon-114x114.png"
+      type="image/x-icon"
+    />
+
+    <!-- Custom css link -->
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- Heafer Start -->
+    <div class="container-fluid">
+      <div class="row bg-dark text-white">
+        <div class="col-md-3 text-center py-1">
+          <div class="fs-3 fw-bold">OUR STORE</div>
+        </div>
+        <div class="col-md-6 py-2">
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-warning" type="submit">Search</button>
+          </form>
+        </div>
+        <div class="col-md-3 fs-3 d-flex justify-content-evenly py-1">
+          <a href="./login.html">
+            <i class="bi bi-box-arrow-in-left text-white"></i
+          ></a>
+          <a href="./register.html"
+            ><i class="bi bi-person-plus text-white"></i
+          ></a>
+          <a href="./cart.html"><i class="bi bi-cart text-white"></i></a>
+        </div>
+      </div>
+    </div>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="./index.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./products.html">Products</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./services.html">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./blogs.html">Blogs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./contact.html">Contact</a>
+            </li>
+            <!-- <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Dropdown
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+            </li> -->
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Header End -->
+    <!-- main content start -->
+    <div class="conatiner-fluid">
+      <div class="bg-light">
+        <div class="container py-5">
+          <div class="row h-100 align-items-center py-5">
+            <div class="col-lg-6">
+              <h1 class="display-4">About us page</h1>
+              <p class="lead text-muted mb-0">
+                Create a minimal about us page using Bootstrap 4.
+              </p>
+              <p class="lead text-muted">
+                Snippet by
+                <a href="https://bootstrapious.com/snippets" class="text-muted">
+                  <u>Bootstrapious</u></a
+                >
+              </p>
+            </div>
+            <div class="col-lg-6 d-none d-lg-block">
+              <img
+                src="https://bootstrapious.com/i/snippets/sn-about/illus.png"
+                alt=""
+                class="img-fluid"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white py-5">
+        <div class="container py-5">
+          <div class="row align-items-center mb-5">
+            <div class="col-lg-6 order-2 order-lg-1">
+              <i class="fa fa-bar-chart fa-2x mb-3 text-primary"></i>
+              <h2 class="font-weight-light">Lorem ipsum dolor sit amet</h2>
+              <p class="font-italic text-muted mb-4">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+              <a href="#" class="btn btn-light px-5 rounded-pill shadow-sm"
+                >Learn More</a
+              >
+            </div>
+            <div class="col-lg-5 px-5 mx-auto order-1 order-lg-2">
+              <img
+                src="https://bootstrapious.com/i/snippets/sn-about/img-1.jpg"
+                alt=""
+                class="img-fluid mb-4 mb-lg-0"
+              />
+            </div>
+          </div>
+          <div class="row align-items-center">
+            <div class="col-lg-5 px-5 mx-auto">
+              <img
+                src="https://bootstrapious.com/i/snippets/sn-about/img-2.jpg"
+                alt=""
+                class="img-fluid mb-4 mb-lg-0"
+              />
+            </div>
+            <div class="col-lg-6">
+              <i class="fa fa-leaf fa-2x mb-3 text-primary"></i>
+              <h2 class="font-weight-light">Lorem ipsum dolor sit amet</h2>
+              <p class="font-italic text-muted mb-4">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+              <a href="#" class="btn btn-light px-5 rounded-pill shadow-sm"
+                >Learn More</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-light py-5">
+        <div class="container py-5">
+          <div class="row mb-4">
+            <div class="col-lg-5">
+              <h2 class="display-4 font-weight-light">Our team</h2>
+              <p class="font-italic text-muted">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              </p>
+            </div>
+          </div>
+
+          <div class="row text-center">
+            <!-- Team item-->
+            <div class="col-xl-3 col-sm-6 mb-5">
+              <div class="bg-white rounded shadow-sm py-5 px-4">
+                <img
+                  src="https://bootstrapious.com/i/snippets/sn-about/avatar-4.png"
+                  alt=""
+                  width="100"
+                  class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm"
+                />
+                <h5 class="mb-0">Manuella Nevoresky</h5>
+                <span class="small text-uppercase text-muted"
+                  >CEO - Founder</span
+                >
+                <ul class="social mb-0 list-inline mt-3">
+                  <li class="list-inline-item">
+                    <a href="#" class="social-link"
+                      ><i class="fa fa-facebook-f"></i
+                    ></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="#" class="social-link"
+                      ><i class="fa fa-twitter"></i
+                    ></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="#" class="social-link"
+                      ><i class="fa fa-instagram"></i
+                    ></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="#" class="social-link"
+                      ><i class="fa fa-linkedin"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- End-->
+
+            <!-- Team item-->
+            <div class="col-xl-3 col-sm-6 mb-5">
+              <div class="bg-white rounded shadow-sm py-5 px-4">
+                <img
+                  src="https://bootstrapious.com/i/snippets/sn-about/avatar-3.png"
+                  alt=""
+                  width="100"
+                  class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm"
+                />
+                <h5 class="mb-0">Samuel Hardy</h5>
+                <span class="small text-uppercase text-muted"
+                  >CEO - Founder</span
+                >
+                <ul class="social mb-0 list-inline mt-3">
+                  <li class="list-inline-item">
+                    <a href="#" class="social-link"
+                      ><i class="fa fa-facebook-f"></i
+                    ></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="#" class="social-link"
+                      ><i class="fa fa-twitter"></i
+                    ></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="#" class="social-link"
+                      ><i class="fa fa-instagram"></i
+                    ></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="#" class="social-link"
+                      ><i class="fa fa-linkedin"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- End-->
+
+            <!-- Team item-->
+            <div class="col-xl-3 col-sm-6 mb-5">
+              <div class="bg-white rounded shadow-sm py-5 px-4">
+                <img
+                  src="https://bootstrapious.com/i/snippets/sn-about/avatar-2.png"
+                  alt=""
+                  width="100"
+                  class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm"
+                />
+                <h5 class="mb-0">Tom Sunderland</h5>
+                <span class="small text-uppercase text-muted"
+                  >CEO - Founder</span
+                >
+                <ul class="social mb-0 list-inline mt-3">
+                  <li class="list-inline-item">
+                    <a href="#" class="social-link"
+                      ><i class="fa fa-facebook-f"></i
+                    ></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="#" class="social-link"
+                      ><i class="fa fa-twitter"></i
+                    ></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="#" class="social-link"
+                      ><i class="fa fa-instagram"></i
+                    ></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="#" class="social-link"
+                      ><i class="fa fa-linkedin"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- End-->
+
+            <!-- Team item-->
+            <div class="col-xl-3 col-sm-6 mb-5">
+              <div class="bg-white rounded shadow-sm py-5 px-4">
+                <img
+                  src="https://bootstrapious.com/i/snippets/sn-about/avatar-1.png"
+                  alt=""
+                  width="100"
+                  class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm"
+                />
+                <h5 class="mb-0">John Tarly</h5>
+                <span class="small text-uppercase text-muted"
+                  >CEO - Founder</span
+                >
+                <ul class="social mb-0 list-inline mt-3">
+                  <li class="list-inline-item">
+                    <a href="#" class="social-link"
+                      ><i class="fa fa-facebook-f"></i
+                    ></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="#" class="social-link"
+                      ><i class="fa fa-twitter"></i
+                    ></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="#" class="social-link"
+                      ><i class="fa fa-instagram"></i
+                    ></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="#" class="social-link"
+                      ><i class="fa fa-linkedin"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- End-->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- main content end -->
+    <!-- Footer start -->
+    <div class="container-fluid">
+      <footer
+        class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top"
+      >
+        <div class="col-md-4 d-flex align-items-center">
+          <a
+            href="/"
+            class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1"
+          >
+            <i class="bi bi-house"></i>
+          </a>
+          <span class="mb-3 mb-md-0 text-body-secondary"
+            >&copy; 2024 Company, Inc</span
+          >
+        </div>
+
+        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+          <li class="ms-3">
+            <a class="text-body-secondary" href="#"
+              ><i class="bi bi-facebook"></i
+            ></a>
+          </li>
+          <li class="ms-3">
+            <a class="text-body-secondary" href="#"
+              ><i class="bi bi-instagram"></i
+            ></a>
+          </li>
+          <li class="ms-3">
+            <a class="text-body-secondary" href="#"
+              ><i class="bi bi-twitter"></i
+            ></a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+    <!-- Footer end -->
+
+    <!-- BOOTSTRAP JS CDN -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
