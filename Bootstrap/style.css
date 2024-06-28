@@ -14,3 +14,6 @@ table img {
 p {
   text-align: justify;
 }
+.card img {
+  height: 200px;
+}
