@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Data Types
+      /*
+          1.String - ever visibile character - "" or ''
+          2.Number - 0 to 9
+          3.Boolean - true or false
+          4.Null - nothing
+          5.Undefined - nothing
+          6.Object - date, array, object,
+          */
+      //   let a = 5;
+      //   document.write("Value of a: ", a);
+      //   document.write("<br> Type of a: ", typeof a);
+
+      //   let b = true;
+      //   document.write("<br>Value of a: ", b);
+      //   document.write("<br> Type of a: ", typeof b);
+
+      /*
+      let,const,var
+      let,var -> variable (values can be changed)
+      const -> constant (values can't be changed)
+
+      let,const - block scoped
+      var - global scoped
+
+      let,const - cannot be redefined
+      var - can be redefined
+
+      let,const - can be changed into let,const in inner scope but not into var
+      var - can be changed into let,const or var in inner scope
+      */
+      {
+        let a = 5;
+        var b = "name";
+        const c = 3.34;
+        document.write("<br>A:", a);
+        document.write("<br>B:", b);
+        document.write("<br>C:", c);
+
+        a = "ram";
+        document.write("<br>A:", a);
+      }
+      /*
+      Casing
+        1.camelCase
+        2.snake_case
+        3.SCREAMING_SNAKE_CASE
+        4.PascalCase
+        5.kebab-case
+      */
+
+      /*
+      Operators
+        1.Arithmetic Operators : + - * / % **
+        2.Increment/Decrement Operators : ++ / --
+            pre-increment,pre-decrement
+            post-increment,post-decrement
+        3.Assignment Operator:
+            = : equal to
+            += : a+=2 +> a = a + 2 
+            -= *= /= %= **=
+        4.Relational Operator : to check relatios
+            <
+            >
+            <=
+            >=
+            == : equals to
+            != : not equals to
+            === : strictly equals to
+            !== : strictly not equals to
+        5.Ternary Operator/Conditional Operator
+            (condition) ? value if true : value if false
+        6.Logical Operator 
+            &&
+            ||
+            !
+        7.Bitwise Operator
+            $
+            |
+            ~
+      */
+
+      let a = 5;
+      //   document.write("<br>A:", a++);
+      document.write("<br>A:", ++a);
+
+      a += 4;
+      document.write("<br>A:", a);
+
+      a -= 3;
+      document.write("<br>A:", a);
+
+      a *= 4;
+      document.write("<br>A:", a);
+
+      a /= 7;
+      document.write("<br>A:", a);
+
+      a %= 3;
+      document.write("<br>A:", a);
+
+      a = 5;
+      a **= 3;
+      document.write("<br>A:", a);
+
+      //   a = 5;
+      //   a = "5";
+      //   if (a === b) {
+      //     document.write("<br>A is equals to B");
+      //   } else {
+      //     document.write("<br>A is not equals to B");
+      //   }
+      a = 5;
+      b = 6;
+      //   c = a.b ? a : b;
+      //   document.write("<br>A:", c);
+      a > b
+        ? document.write("<br>A is greater than B")
+        : document.write("<br>A is less than B");
+
+      c = 8;
+      let higest = a > b ? (a > c ? a : c) : b > c ? b : c;
+      document.write("<br>higest:", higest);
+    </script>
+  </body>
+</html>
