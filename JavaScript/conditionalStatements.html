@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+          1.if statement
+              if(condition){
+                  statements if the condition is true
+              }
+
+          2.if - else
+              if(condition){
+                  statements if condition is true
+              }
+              else{
+                  statements if condition is false
+              }
+
+          3.if - else if - else if - ... - else
+              if(condition1){
+                  statement if condition1 is true
+              }
+              else if(condition2){
+                  statement if condition2 is true
+              }
+              else{
+                  statement if all conditions are false
+              }
+
+          4.Nested if - else statement
+              if - else statement inside another if - else statement
+
+              if(condition1){
+                  if(conditionA){
+                  statement if condition1 and conditionA are true
+                  }
+                  else{
+                  statement if condition1 is true but conditionA is false
+                  }
+              }
+              else{
+              if(conditionB){
+                  statement if condition1 is false but conditionB is true
+              }
+              else{
+                  statement if condition1 and conditionB are false
+              }
+              }
+
+          5.Compound Statements
+              if(condition1 && conditionA){
+              }
+              else if(conditiion1 && !conditionB){
+              }
+              else if(!condition1 && conditionB){
+              }
+              else{
+              }
+          */
+      //   let a = 5;
+      //   if (a < 0) {
+      //     document.write("<br> Then number is negtive");
+      //   } else if (a > 0) {
+      //     document.write("<br>The number is positive");
+      //   } else {
+      //     document.write("<br> The number is zero");
+      //   }
+
+      //   let a = 15;
+      //   let b = 6;
+      //   a > b && document.write("<br>A is greater than B");
+
+      //   WAP to check if number is odd or oven
+      //   let a = prompt("Enter a number");
+      //   if (a % 2 == 0) {
+      //     document.write("<br>Number is even");
+      //   } else {
+      //     document.write("<br>Number is odd");
+      //   }
+
+      //   //   Wap to check if number is divisible by 5 and 11(nested if-else)
+      //   let b = prompt("Enter a number");
+      //   if (b % 5 == 0) {
+      //     if (b % 11 == 0) {
+      //       document.write("<br>Number is divisible by 5 and 11");
+      //     }
+      //   } else {
+      //     document.write("<br>Number is not divisible by 5 and 11");
+      //   }
+
+      //   WAP to check if the year is leap year or not
+      let year = prompt("Enter a year");
+      if (year % 4 == 0 || year % 400 == 0) {
+        document.write("<br>Year is leap year");
+      } else {
+        document.write("<br> Year is not leap year");
+      }
+
+      //   Wap to input a number and display correspoding day
+
+      let day = prompt("Enter a day");
+      if (day == 1) {
+        document.write("<br>Sunday");
+      } else if (day == 2) {
+        document.write("<br>Monday");
+      } else if (day == 3) {
+        document.write("<br>Tuesday");
+      } else if (day == 4) {
+        document.write("<br>Wednesday");
+        4;
+      } else if (day == 5) {
+        document.write("<br>Thursday");
+      } else if (day == 6) {
+        document.write("<br>Friday");
+      } else if (day == 7) {
+        document.write("<br>Saturday");
+      } else {
+        document.write("<br>Invalid day");
+      }
+    </script>
+  </body>
+</html>

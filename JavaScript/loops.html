@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+        loops - to perform same/similar task repeatedly
+        -initialization : when to start
+        -condition : when to stop
+        -statement : what to do/repeat
+        -next : how to proceed
+
+        while loop:
+        initialization
+        while(condition){
+        statements
+        next
+        }
+
+        do - while loop:
+        initialization
+        do{
+        statement
+        next
+        }while(condition)
+
+        for loop
+        for(initialization; condition; next){
+        statement
+        }
+
+        */
+      //    print hello world 20 times
+
+      //   while loop
+      let i = 1; // initialization
+      while (i <= 20) {
+        // condition check
+        document.write("Hello world<br>"); // statement
+        i++; //next
+      }
+
+      // do while loop
+      i = 1; //initialization
+      do {
+        document.write("<h4>Hello World</h4>"); //statement
+        i++; //next
+      } while (i <= 20); //condition check
+
+      //   for loop
+      for (i = 1; i <= 20; i++) {
+        document.write("<li>Hello World</li>");
+      }
+    </script>
+  </body>
+</html>
