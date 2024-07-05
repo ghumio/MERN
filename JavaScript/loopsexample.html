@@ -19,11 +19,11 @@
           i,
           " ",
           "is:",
-          i ** 3,
-          "<br>"
+          i ** 3
         );
         i++;
       }
+      document.write("<br>");
 
       //   WAP to display multiplication of given number
       let n = 15;
@@ -39,6 +39,126 @@
         sum = sum + 1 / i;
       }
       document.write("<br>Sum of series upto 5 terms : ", sum);
+
+      // WAP that displays the n terms of square natural numbers and their sum.
+
+      n = 5;
+      sum = 0;
+      let square = "";
+      for (i = 1; i <= n; i++) {
+        square = square + i ** 2 + " ";
+        sum = sum + i ** 2;
+      }
+      document.write("<br>The square natural upto 5 terms are: ", square);
+      document.write(
+        "<br>The Sum of Square Natural Number upto 5 terms = ",
+        sum,
+        "<br>"
+      );
+
+      // WAP  to find the sum of the series 1 +11 + 111 + 1111 + .. n terms.
+      n = 5;
+      sum = 0;
+      let term = 0;
+      for (i = 1; i <= n; i++) {
+        term = term * 10 + 1;
+        document.write(term + "+");
+        sum += term;
+      }
+      document.write("<br>The Sum is: ", sum);
+
+      // WAP Write a program to display the first n terms of the Fibonacci series.
+
+      n = 10;
+      let x = 0,
+        y = 1,
+        z;
+      document.write("<br>Here is the Fibonacci series up to 10 terms:<br>");
+      for (i = 1; i <= n; i++) {
+        if (i === 1) {
+          document.write(x + " ");
+          continue;
+        }
+        if (i === 2) {
+          document.write(y + " ");
+          continue;
+        }
+        z = x + y;
+        document.write(z + " ");
+        x = y;
+        y = z;
+      }
+
+      // WAP  to display the number in reverse order.
+      let number = 12345;
+      let reverse = 0;
+      while (number > 0) {
+        reverse = reverse * 10 + (number % 10);
+        number = Math.floor(number / 10);
+      }
+      document.write("<br>The number in reverse order is: ", reverse, "<br>");
+
+      // WAP to check whether a number is a palindrome or not.
+
+      n = 121;
+      reverse = 0;
+      let originalNumber = n;
+      while (n > 0) {
+        reverse = reverse * 10 + (n % 10);
+        n = Math.floor(n / 10);
+      }
+
+      if (originalNumber === reverse) {
+        document.write(originalNumber + " is palindrome");
+      } else {
+        document.write(originalNumber + " is not palindrome");
+      }
+
+      //WAP to convert a decimal number into binary without using an array.
+      let decimal = 10;
+      let tens = 1;
+      let result = 0;
+      while (decimal / 2 > 0) {
+        let rem = decimal % 2;
+        result = rem * tens + result;
+        decimal = Math.trunc(decimal / 2);
+        tens = tens * 10;
+      }
+      document.write("<br>Result = ", result);
+
+      //WAP to convert a binary number into a decimal number without
+      // let binary = 1010101;
+      // result = 0;
+      // let base = 1;
+      // for (; binary > 0; binary = Math.floor(binary / 10)) {
+      //   rem = binary % 10;
+      //   result += rem * base;
+      //   base *= 2;
+      // }
+      // document.write("<br>Decimal = ", result);
+
+      let base = 1;
+      let binary = 0;
+      while (result > 0) {
+        let rem = result % 10;
+        binary = rem * base + binary;
+        result = Math.floor(result / 10);
+        base = base * 2;
+      }
+      document.write("<br>Decimal = ", binary);
+      document.write("<br>");
+
+      //WAP  to find the number and sum of all integers between 100 and 200 which are divisible by 9.
+
+      sum = 0;
+      document.write("Numbers between 100 and 200, divisible by 9 : <br>");
+      for (i = 100; i <= 200; i++) {
+        if (i % 9 == 0) {
+          document.write(i, " ");
+          sum = sum + i;
+        }
+      }
+      document.write("<br>The sum is ", sum);
     </script>
   </body>
 </html>
