@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 
+    array:
+        collectoion of similar/disimilar data types
+    -->
+    <script>
+      //   let arr = [
+      //     1,
+      //     2,
+      //     3,
+      //     "a",
+      //     "b",
+      //     [3, 3, 3, 3],
+      //     { name: "ram" },
+      //     null,
+      //     undefined,
+      //     true,
+      //   ];
+      //   document.write(arr);
+
+      //   //   array length
+      //   document.write("<br>Length:", arr.length);
+      //   document.write("<br>Length:", arr[6].name);
+
+      //   //   index
+      //   // starts at 0
+      //   document.write("<br>First:", arr[0]);
+      //   document.write("<br>Last:", arr[arr.length - 1]);
+
+      //   let [a, b, c, ...d] = arr;
+      //   document.write("<br>a = ", a);
+      //   document.write("<br>b = ", b);
+      //   document.write("<br>c = ", c);
+      //   document.write("<br>d = ", d);
+
+      let fruits = ["apple", "orange", "mango", "banana"];
+      document.write("Original Array:", fruits);
+
+      //   to add new member
+      // push - add new member at the end of the array
+      fruits.push("pineapple");
+      document.write("<br>Push:", fruits);
+
+      //   unshift -add new member at the beginning of the array
+      fruits.unshift("pear");
+      document.write("<br>Unshift:", fruits);
+
+      //   pop - remove member from end of the array
+      let removed = fruits.pop();
+      document.write("<br>Pop:", fruits);
+      document.write("<br>Removed:", removed);
+
+      //
+
+      //   shift - remove member from start of the array
+      removed = fruits.shift();
+      document.write("<br>Shift:", fruits);
+      document.write("<br>Removed:", removed);
+
+      // splice - add or remove from anywhere in the array
+      //   splice(index,number,new_member)
+      /*
+    index - where to add or remove
+    number - number of members to remove
+    new_member - new_members to add
+    */
+      removed = fruits.splice(2, 0, "pear", "pineapple");
+      document.write("<br>Splice:", fruits);
+      document.write("<br>Removed:", removed);
+      document.write("<br>Splice:", fruits.length);
+
+      fruits.sort();
+      document.write("<br>Sorted:", fruits);
+
+      fruits.reverse();
+      document.write("<br>Reversed:", fruits);
+
+      let num = [55, 35, 350, 15, 500, 400, 200, 43, 21, 12, 499];
+      num.sort((a, b) => a - b);
+      document.write("<br>Numbers sort:", num);
+
+      num.sort((a, b) => b - a);
+      document.write("<br>Numbers sort:", num);
+
+      let result = fruits.toString();
+      document.write("<br>Fruits: ", fruits.length);
+      document.write("<br>Fruits: ", result.length);
+
+      // slice - to create new array from existing
+      /*
+    slice(start index,end index) - end is not included
+
+    */
+      let new_fruits = fruits.slice(1, 4);
+      document.write("<br>Fruits: ", fruits);
+      document.write("<br>New Fruits: ", new_fruits);
+
+      //   negative index will count from end
+      new_fruits = fruits.slice(-5, -2);
+      document.write("<br>Fruits: ", fruits);
+      document.write("<br>New Fruits: ", new_fruits);
+
+      //   if index is not provided,it will slice to the end
+      new_fruits = fruits.slice(1);
+      document.write("<br>Fruits: ", fruits);
+      document.write("<br>New Fruits: ", new_fruits);
+
+      let veg = ["potato", "tomato"];
+      document.write("<br>Fruits:", fruits.length);
+      fruits.splice(2, 0, veg);
+      document.write("<br>Fruits:", fruits.length);
+      new_fruits = fruits.flat();
+      document.write("<br>Fruits:", new_fruits.length);
+    </script>
+  </body>
+</html>
