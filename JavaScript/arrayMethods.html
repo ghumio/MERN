@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 
+    foreach
+    map
+    filter
+    find
+    findIndex
+    findLast
+    findLastIndex
+    reduce
+    -->
+
+    <script>
+      let fruits = [
+        "apple",
+        "orange",
+        "mango",
+        "banana",
+        "pear",
+        "pineapple",
+        "grapes",
+      ];
+      //   for (i = 0; i < fruits.length; i++) {
+      //     document.write(fruits[i], "<br>");
+      //   }
+      //   // arrat.foreeach(function(member){statement})
+
+      //   //   for - in
+      //   for (var index in fruits) {
+      //     document.write("<li>", fruits[index], "</li>");
+      //   }
+
+      //   //   for - of
+      //   for (var member of fruits) {
+      //     document.write("<h4>", member, "</h4>");
+      //   }
+
+      //   fruits.forEach((item, i) => {
+      //     document.write("<li>", i + 1, ". ", item, "</li>");
+      //   });
+
+      //   fruits.map((member, i) => {
+      //     document.write("<h4>", i + 1, ")", member, "</h4>");
+      //   });
+
+      let new_arr = fruits.forEach((item, i) => {
+        return item.toUpperCase();
+      });
+      document.write("<br>New: ", new_arr);
+
+      new_arr = fruits.map((item, i) => {
+        return item.toUpperCase();
+      });
+      document.write("<br>New: ", new_arr);
+
+      //   filter
+
+      let filter = fruits.filter((fruit) => fruit.match("ap"));
+      document.write("<br>Filter Result:", filter);
+
+      let num = [23, 45, 67, 342, 78, 9, 53, 4, 12];
+      filter = num.filter((n) => n > 50);
+      document.write("<br>Filter Result:", filter);
+
+      //   find
+      find = fruits.find((fruit) => fruit.match("ap"));
+      document.write("<br>Find Result:", find);
+
+      find = num.find((n) => n > 50);
+      document.write("<br>Find Result:", find);
+
+      //   findIndex
+      find = fruits.findIndex((fruit) => fruit.match("ap"));
+      document.write("<br>Find Result:", find);
+
+      find = num.findIndex((n) => n > 50);
+      document.write("<br>Find Result:", find);
+
+      //   findLast
+      find = fruits.findLast((fruit) => fruit.match("ap"));
+      document.write("<br>Find Result:", find);
+
+      find = num.findLast((n) => n > 50);
+      document.write("<br>Find Result:", find);
+
+      //   findLastIndex
+      find = fruits.findLastIndex((fruit) => fruit.match("ap"));
+      document.write("<br>Find Result:", find);
+
+      find = num.findLastIndex((n) => n > 50);
+      document.write("<br>Find Result:", find);
+
+      // reduce
+      let sum = num.reduce((accumulator, current) => {
+        document.write(
+          "<br>accumulator: ",
+          accumulator,
+          " ",
+          "Current: ",
+          current
+        );
+        return accumulator + current;
+      });
+      document.write("<br>Sum = ", sum);
+
+      sum = num.reduceRight((accumulator, current) => {
+        document.write(
+          "<br>accumulator: ",
+          accumulator,
+          " ",
+          "Current: ",
+          current
+        );
+        return accumulator + current;
+      });
+      document.write("<br>Sum = ", sum);
+
+      sum = fruits.reduce((accumulator, current) => {
+        document.write(
+          "<br>accumulator: ",
+          accumulator,
+          " ",
+          "Current: ",
+          current
+        );
+        return accumulator + current;
+      });
+      document.write("<br>Sum = ", sum);
+
+      let person = {
+        name: "Ram",
+        address: "Kathmandu",
+        phone: "94598304",
+      };
+      for (var key in person) {
+        document.write("<br>", key, ":", person[key]);
+      }
+    </script>
+  </body>
+</html>
