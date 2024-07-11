@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 
+    Strings - collection of characters
+    
+    -->
+    <script>
+      let str =
+        "JavaScript is a programming language for web.JavaScript is a programming language for web.JavaScript is a programming language for web.";
+      document.write("<br>", str);
+      let len = str.length;
+      document.write("<br>", len);
+      document.write("<br>First letter: ", str[0]);
+
+      //   slice(start,end)
+      let new_str = str.slice(1, 5);
+      document.write("<br>New :", new_str);
+
+      //   negative index
+      new_str = str.slice(-5, -2);
+      document.write("<br>New :", new_str);
+
+      //   only startinf index
+      new_str = str.slice(11);
+      document.write("<br>New :", new_str);
+
+      //   substring
+      new_str = str.substring(1, 5);
+      document.write("<br>New :", new_str);
+      //   negative index cannot be used
+      new_str = str.substring(11, 1);
+      document.write("<br>New :", new_str);
+      new_str = str.slice(11, 1);
+      document.write("<br>New :", new_str);
+      new_str = str.substring(11);
+      document.write("<br>New :", new_str);
+
+      //   substr(start index length)
+      new_str = str.substr(-11, 5);
+      document.write("<br>New :", new_str);
+
+      document.write("<br>", str.toLocaleLowerCase());
+      document.write("<br>", str.toLocaleUpperCase());
+      document.write("<br>", str.toLowerCase());
+      document.write("<br>", str.toUpperCase());
+      document.write("<br>", str.toString());
+
+      //   trim
+      new_str = str.trim();
+      document.write("<br> Length: ", new_str.length);
+
+      new_str = str.trimStart();
+      document.write("<br> Length: ", new_str.length);
+
+      new_str = str.trimEnd();
+      document.write("<br> Length: ", new_str.length);
+
+      //   split
+      let words = str.split(" ");
+      document.write("<br>Words: ", words);
+      document.write("<br>No of Words: ", words.length);
+
+      let sentences = str.split(".");
+      sentences.map((sen) => document.write(sen, "<br"));
+      sentences.pop();
+      document.write("<br>No of Sentences = ", sentences.length);
+
+      let symbol_number = 3454934;
+      document.write("<br>", symbol_number.toString().padStart(9, "0"));
+      document.write("<br>", symbol_number.toString().padEnd(9, "X"));
+
+      new_str = str.concat("", "JavaScript is essential for web.");
+      document.write("<br>", new_str);
+      document.write("<br>", new_str.length);
+
+      //   search
+      let result = str.search("programming");
+      document.write("<br>", result);
+
+      document.write("<br>", str.charAt(result));
+      document.write("<br>", str.charCodeAt(result));
+
+      //   replace
+      result = str.replace(/javascript/gi, "JS");
+      document.write("<br>", result);
+
+      //   / / - expression literal
+      //  ` ` - template literal
+      document.write(`<br> ${result}`);
+    </script>
+  </body>
+</html>
