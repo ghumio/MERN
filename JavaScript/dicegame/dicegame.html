@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dice Game</title>
+    <style>
+      .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        flex-direction: column;
+      }
+      .result {
+        display: flex;
+        justify-content: space-evenly;
+        width: 75%;
+      }
+      .player {
+        text-align: center;
+      }
+      .player img {
+        height: 300px;
+        width: 300px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="result">
+        <div class="player">
+          <img src="./dice-six-faces-one.png" alt="" id="p1" />
+          <h3 id="p1_"></h3>
+        </div>
+        <div class="player">
+          <img src="./dice-six-faces-one.png" alt="" id="p2" />
+          <h3 id="p2_"></h3>
+        </div>
+      </div>
+      <h2 id="result">RESULT</h2>
+      <button onclick="roll()" id="btn">ROLL</button>
+    </div>
+
+    <script>
+      let dice = [
+        "dice-six-faces-one.png",
+        "dice-six-faces-two.png",
+        "dice-six-faces-three.png",
+        "dice-six-faces-four.png",
+        "dice-six-faces-five.png",
+        "dice-six-faces-six.png",
+      ];
+      let p1 = document.getElementById("p1");
+      let p2 = document.getElementById("p2");
+      let p1_ = document.getElementById("p1_");
+      let p2_ = document.getElementById("p2_");
+      let result = document.getElementById("result");
+      let btn1 = document.getElementById("btn");
+
+      //   functon roll()
+      const roll = () => {
+        let v1 = Math.floor(Math.random() * 6);
+        let v2 = Math.floor(Math.random() * 6);
+        p1.src = dice[v1];
+        p2.src = dice[v2];
+        p1_.innerHTML = v1 + 1;
+        p2_.innerHTML = v2 + 1;
+        if (v1 > v2) {
+          result.innerHTML = "Player 1 wins";
+        } else if (v2 > v1) {
+          result.innerHTML = "Player 2 wins";
+        } else {
+          result.innerHTML = "Game Draw";
+        }
+        btn1.disabled = true;
+      };
+      /*
+      roll1()->roll dice for player1
+        dice1_button - disabled
+    roll2()-roll dice for player2
+        dice2_button - enable
+
+    rock,paper,scissor
+    if(p1=='rock'&& p2=='paper')||(p1=='paper'&& p2=='scissor')||(p1=='scissor'&&p2=='rock'){
+    p2 wins
+    }
+      */
+    </script>
+  </body>
+</html>
