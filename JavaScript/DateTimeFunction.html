@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Date and Time Functions</title>
+  </head>
+  <body>
+    <!-- 
+    Date: obj
+
+    -->
+    <script>
+      let today = new Date();
+      document.write(today);
+
+      //   today = new Date("2000", "0", "31", "12", "23", "11");
+      //   document.write("<br>", today);
+
+      let yy = today.getFullYear();
+      document.write("<br>Year: ", yy);
+
+      let mm = today.getMonth();
+      document.write("<br>Month: ", mm);
+      let months = [
+        "Jan",
+        "Feb",
+        "Mar",
+        "Apr",
+        "May",
+        "Jun",
+        "Jul",
+        "Aug",
+        "Sept",
+        "Oct",
+        "Nov",
+        "Dec",
+      ];
+      document.write("<br>Month: ", months[mm]);
+
+      let dd = today.getDate();
+      document.write("<br>Date: ", dd);
+
+      let day = today.getDay();
+      document.write("<br>Day: ", day);
+      let days = [
+        "Sunday",
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+      ];
+      document.write("<br>Day: ", days[day]);
+
+      let hh = today.getHours();
+      let min = today.getMinutes();
+      let ss = today.getSeconds();
+      let ms = today.getMilliseconds();
+
+      document.write(`<br>Time: ${hh}:${min}:${ss}:${ms}`);
+
+      let today_date = today.toDateString();
+      document.write(`<br>Date: ${today_date}`);
+
+      let time_now = today.toTimeString();
+      document.write(`<br>Time: ${time_now}`);
+
+      today_date = today.toLocaleDateString();
+      document.write(`<br>Date: ${today_date}`);
+
+      time_now = today.toLocaleTimeString();
+      document.write(`<br>Time ${time_now}`);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="timer"></h1>
+    <script>
+      function timer() {
+        let today = new Date();
+        // let time = today.toLocaleTimeString();
+        let hh = today.getHours();
+        let mm = today.getMinutes();
+        let ss = today.getSeconds();
+        let ms = today.getMilliseconds();
+        let am_pm = "AM";
+        if (hh > 12) {
+          hh = hh - 12;
+          am_pm = "PM";
+        }
+        document.getElementById(
+          "timer"
+        ).innerHTML = `${hh}:${mm}:${ss}:${ms}:${am_pm}`;
+      }
+      setInterval(timer, [1000]);
+    </script>
+  </body>
+</html>
