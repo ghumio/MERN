@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let name = localStorage.getItem("name");
+      document.write("Name: ", name);
+
+      let ph = localStorage.getItem("phone");
+      document.write("<br>Phone: ", ph);
+
+      let key = "name";
+      let value = "Ram";
+      localStorage.setItem(key, value);
+
+      let fruits = JSON.parse(localStorage.getItem("fruits"));
+      document.write("<br>", fruits);
+      document.write("<br>", fruits.length);
+
+      let person = JSON.parse(localStorage.getItem("person"));
+      document.write("<br>Name: ", person.name);
+      document.write("<br>Phone: ", person.phone);
+      document.write("<br>Address: ", person.address);
+
+      localStorage.removeItem("person");
+      localStorage.removeItem("fruits");
+
+      localStorage.clear();
+    </script>
+  </body>
+</html>

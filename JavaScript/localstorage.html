@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // localStorage
+      // localStorage.setItem(key,value)
+      //   JSON - JavaScript Object Notation
+      /*
+      'key':'value'
+      */
+      localStorage.setItem("name", "ram");
+      localStorage.setItem("phone", 9309039);
+
+      let person = {
+        name: "Shyam",
+        phone: "9350039",
+        address: "ktm",
+      };
+
+      for (var key in person) {
+        localStorage.setItem(key, person[key]);
+      }
+
+      let fruits = ["apple", "orange", "pear", "banana"];
+      fruits = JSON.stringify(fruits);
+      localStorage.setItem("fruits", fruits);
+
+      person = {
+        name: "Shyam",
+        phone: "9350039",
+        address: "ktm",
+      };
+      localStorage.setItem("person", JSON.stringify(person));
+
+      sessionStorage.setItem("logininfo", "loggedin");
+    </script>
+  </body>
+</html>
