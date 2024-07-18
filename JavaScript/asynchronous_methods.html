@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // synchronous method
+      let fruits = ["orange"];
+      function add_fruit(new_fruit) {
+        fruits.push(new_fruit);
+      }
+      function display() {
+        document.write("<br>", fruits);
+      }
+
+      //   document.write("<br>");
+      //   add_fruit("apple");
+      //   display();
+      //   add_fruit("mango");
+      //   display();
+
+      //   asynchronous method
+      function add_fruit_async(new_fruit) {
+        setTimeout(() => {
+          fruits.push(new_fruit);
+        }, [1000]);
+      }
+
+      function display_async() {
+        setTimeout(() => {
+          document.write("<br>", fruits);
+        }, [2000]);
+      }
+      //   document.write("1<br>");
+      //   add_fruit_async("apple");
+      //   display_async();
+      //   add_fruit_async("mango");
+      //   display_async();
+      //   add_fruit_async("grapes");
+      //   display_async();
+
+      //   1. Callback function
+
+      function add_fruit_async(new_fruit, cb) {
+        setTimeout(() => {
+          fruits.push(new_fruit);
+          cb();
+        }, [2000]);
+      }
+
+      function display_async() {
+        setTimeout(() => {
+          document.write("<br>", fruits);
+        }, [1000]);
+      }
+      //   add_fruit_async("apple", display_async);
+      //   display_async();
+      //   add_fruit_async("mango");
+      //   display_async();
+      //   add_fruit_async("grapes");
+      //   display_async();
+
+      //   2.promise - .then .catch
+      function add_fruit_async(new_fruit, cb) {
+        setTimeout(() => {
+          fruits.push(new_fruit);
+          cb();
+        }, [2000]);
+      }
+
+      function add_fruit_promise(new_fruit) {
+        return new Promise((resolve, reject) => {
+          let error = false;
+          setTimeout(() => {
+            if (!error) {
+              fruits.push(new_fruit);
+              resolve();
+            } else {
+              reject("Something went wrong");
+            }
+          }, [5000]);
+        });
+      }
+
+      function display_async() {
+        setTimeout(() => {
+          document.write("<br>", fruits);
+        }, [1000]);
+      }
+      //   add_fruit_promise("apple")
+      //     .then(display_async)
+      //     .catch((error) => {
+      //       document.write(error);
+      //     });
+
+      // 3.async await
+      const demofunction = async (new_fruit) => {
+        try {
+          await add_fruit_promise(new_fruit);
+          display_async();
+        } catch (error) {
+          document.write(error);
+        }
+      };
+      demofunction("mango");
+    </script>
+  </body>
+</html>

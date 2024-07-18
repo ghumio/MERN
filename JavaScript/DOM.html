@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document Object Model</title>
+  </head>
+  <body id="body">
+    <p></p>
+    <p></p>
+    <p></p>
+    <p class="test"></p>
+
+    <h1 class="test"></h1>
+
+    <script>
+      let body = document.getElementById("body");
+      let header = document.createElement("div");
+
+      body.appendChild(header);
+
+      let menuitems = ["HOME", "ABOUT", "SERVICES", "BLOGS", "CONTACT"];
+
+      menuitems.map((menuitem) => {
+        let item = document.createElement("h2");
+        item.style.listStyle = "none";
+        item.innerHTML = menuitem;
+        header.appendChild(item);
+      });
+      header.style.display = "flex";
+      header.style.justifyContent = "space-evenly";
+      body.appendChild(header);
+
+      let para = document.getElementsByTagName("p");
+      para[0].innerHTML = "test";
+      para[1].innerHTML = "test";
+      para[2].innerHTML = "test";
+      para[3].innerHTML = "test";
+
+      let tests = document.getElementsByClassName("test");
+      tests[1].innerHTML = "Test Element";
+
+      let example1 = document.querySelector("p");
+      let example2 = document.querySelector("test");
+      let example3 = document.querySelector("#body");
+
+      let example4 = document.querySelectorAll("p");
+      for (i = 0; i < example4.length; i++) {
+        example4[i].innerHTML = "This is an example of query selector";
+      }
+    </script>
+  </body>
+</html>
