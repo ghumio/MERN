@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Regular Expression</title>
+  </head>
+  <body>
+    <!-- 
+    regular expression - string and patterns of string
+    -->
+
+    <script>
+      /*
+          /text/ - regular expression
+          / / - expression literal
+          */
+
+      //   let string = "apple";
+      //   if (string.match("ap")) {
+      //     document.write("Matched");
+      //   } else {
+      //     document.write("Unmatched");
+      //   }
+
+      /*
+      /a/ - apple,banana,orange
+      /ap/ - apple,grapes,papaya
+      /[ap]/ - a or p
+      [] - collection/one character
+       apple,grapes,papaya,pear,orange,pin
+
+       /[a-z]/ - lowercase alphabets
+       /[A-Z]/ - uppercase alphabets
+       /[0-9]/ - numbers
+       /[a-z]/i - alphabets upper and lowerecase
+       /[a-zA-Z0-9]/ - alphabets upper and lowerecase and numbers
+       /[a-z][A-Z]/ - aA
+       /[+*\/!@#$%^&\-]/ - special characters
+       /[(){}[]]/
+
+
+       meta characters
+       ^ - start of the string
+       $ - end of the string
+       . - single character
+       + - 1 0r more
+       * - 0 or more
+       {5} - exact 5 characters
+       /d{5}/ - ddddd
+       {5,} - minimum 5 characters
+
+
+       /^a.e$/ - ate, ape, ale, a1e, a2e, a.e
+
+       /^.at/ - pat, bat, cat, rat, path, kathmandu, bath, 1ate
+
+       /.at$/ - pat, bat, cat, rat, splat
+
+       /^a+p/ - ap, aap, aaap, aaaaaaaap,
+
+       /^[a-c]*t$/ - t, at, bt, ct, aat, bat, cat,
+
+      */
+      //   let string = "apple";
+      //   if (string.match(/^a/)) {
+      //     document.write("Matched");
+      //   } else {
+      //     document.write("Unmatched");
+      //   }
+
+      //   string = "apple";
+      //   if (string.match(/e$/)) {
+      //     document.write("Matched");
+      //   } else {
+      //     document.write("Unmatched");
+      //   }
+
+      let string = "apple";
+      if (string.match(/a...e$/)) {
+        document.write("Matched");
+      } else {
+        document.write("Unmatched");
+      }
+
+      //   name
+      let name = /^[a-zA-z]{3,30}$/;
+
+      // phone number
+      let phone = /^9(8|7)[04-7][0-9]{7}$/;
+
+      // email
+      let email = /^[a-zA-Z][a-zA-Z0-9_.]+[@][a-z]+[.](com)/;
+    </script>
+  </body>
+</html>
