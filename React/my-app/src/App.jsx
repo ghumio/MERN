@@ -1,17 +1,15 @@
 // import { useState } from "react";
 // import "./App.css";
 
-import First from "./First";
-import Fourth from "./Fourth";
+// import First from "./First";
+// import Fourth from "./Fourth";
+// import { Second } from "./Second";
+import Myroutes from "./Myroutes";
 
 function App() {
   return (
     <>
-      <>React Fragment</>
-      <h1>Hello World</h1>
-      <br />
-      <First />
-      <Fourth />
+      <Myroutes />
     </>
   );
 }
