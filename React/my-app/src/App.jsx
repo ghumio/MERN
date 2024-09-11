@@ -5,6 +5,8 @@
 // import Fourth from "./Fourth";
 // import { Second } from "./Second";
 import Myroutes from "./Myroutes";
+import "./myStyle.css";
+import "./index.css";
 
 function App() {
   return (
