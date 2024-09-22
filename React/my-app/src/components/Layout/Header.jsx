@@ -30,13 +30,13 @@ const Header = () => {
         <Link to="/products">
           Products <i className="bi bi-grid"></i>
         </Link>
-        <Link to="/Services">
+        <Link to="/services">
           Services <i className="bi bi-gear"></i>
         </Link>
-        <Link to="/Blogs">
+        <Link to="/blogs">
           Blogs <i className="bi bi-copy"></i>
         </Link>
-        <Link to="/Contact">
+        <Link to="/contact">
           Contact <i className="bi bi-person"></i>
         </Link>
       </div>
