@@ -9,6 +9,10 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Contact from "./pages/Contact";
 import Product from "./pages/Product";
+import Counter from "./Hooks/Counter";
+import Display from "./Hooks/Display";
+import ReduxCounter from "./Redux/ReduxCounter";
+import Games from "./Redux/Games";
 const Myroutes = () => {
   return (
     <BrowserRouter>
@@ -20,6 +24,10 @@ const Myroutes = () => {
           <Route path="/register" element={<Register />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/product" element={<Product />} />
+          <Route path="/count" element={<Counter />} />
+          <Route path="/display" element={<Display />} />
+          <Route path="/counter" element={<ReduxCounter />} />
+          <Route path="/games" element={<Games />} />
         </Route>
       </Routes>
     </BrowserRouter>
