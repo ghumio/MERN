@@ -8,7 +8,7 @@ const Games = () => {
 
   let dispatch = useDispatch();
   return (
-    <div className="">
+    <div className="flex flex-col justify-center items-center min-h-screen">
       Game:{game}
       <br />
       <input

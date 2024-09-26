@@ -13,6 +13,8 @@ import Counter from "./Hooks/Counter";
 import Display from "./Hooks/Display";
 import ReduxCounter from "./Redux/ReduxCounter";
 import Games from "./Redux/Games";
+import DataFetch from "./Hooks/DataFetch";
+import PostDetails from "./Hooks/PostDetails";
 const Myroutes = () => {
   return (
     <BrowserRouter>
@@ -28,6 +30,8 @@ const Myroutes = () => {
           <Route path="/display" element={<Display />} />
           <Route path="/counter" element={<ReduxCounter />} />
           <Route path="/games" element={<Games />} />
+          <Route path="/datafetch" element={<DataFetch />} />
+          <Route path="/data/:id" element={<PostDetails />} />
         </Route>
       </Routes>
     </BrowserRouter>
