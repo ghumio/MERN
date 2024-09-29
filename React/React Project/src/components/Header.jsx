@@ -12,11 +12,20 @@ import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
+import { useSelector } from "react-redux";
 
-const pages = ["Products", "Cart", "Blog", "Contact"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 function Header() {
+  const cart_items = useSelector((store) => store.cartStore.cart_items);
+
+  const pages = [
+    "Products",
+    `${cart_items.length > 0 ? `Cart(` + cart_items.length + `)` : `Cart`}`,
+    "Blog",
+    "Contact",
+  ];
+
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
