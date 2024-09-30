@@ -19,6 +19,7 @@ export default function ProductCard({ item }) {
       title: item.title,
       price: item.price,
       image: item.images[0],
+      stock: item.stock,
       quantity: 1,
       id: Date.now(),
     };

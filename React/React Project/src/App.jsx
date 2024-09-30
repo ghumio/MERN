@@ -12,7 +12,15 @@ const App = () => {
     cartStore: cartReducer,
   });
 
-  const store = createStore(rootReducer, applyMiddleware(thunk));
+  const initialData = {
+    cartStore: {
+      cart_items: localStorage.getItem("cart_items")
+        ? JSON.parse(localStorage.getItem("cart_items"))
+        : [],
+    },
+  };
+
+  const store = createStore(rootReducer, initialData, applyMiddleware(thunk));
   return (
     <>
       <Provider store={store}>

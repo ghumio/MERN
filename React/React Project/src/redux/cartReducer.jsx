@@ -12,6 +12,12 @@ export const cartReducer = (state = initialData, action) => {
           return item.title == action.payload.title ? action.payload : item;
         }),
       };
+    case "REMOVE_FROM_CART":
+      return {
+        cart_items: state.cart_items.filter(
+          (item) => item.id != action.payload
+        ),
+      };
     default:
       return state;
   }

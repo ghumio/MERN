@@ -50,3 +50,45 @@ export const add_to_cart = (item) => async (dispatch, getState) => {
     console.log(error);
   }
 };
+
+export const update_cart1 = (item) => async (dispatch, getState) => {
+  await dispatch({ type: "UPDATE_CART", payload: item });
+  localStorage.setItem(
+    "cart_items",
+    JSON.stringify(getState().cartStore.cart_items)
+  );
+
+  Swal.fire("Congrats", "Item quantity decreased in cart", "success");
+};
+
+export const update_cart = (item) => async (dispatch, getState) => {
+  await dispatch({ type: "UPDATE_CART", payload: item });
+  localStorage.setItem(
+    "cart_items",
+    JSON.stringify(getState().cartStore.cart_items)
+  );
+
+  Swal.fire("Congrats", "Item quantity increased in cart", "success");
+};
+
+export const remove_from_cart = (id) => async (dispatch, getState) => {
+  Swal.fire({
+    title: "Warning!",
+    text: "Are you sure you want to remove this item from cart?",
+    icon: "question",
+    showCancelButton: true,
+    cancelButtonText: "NO",
+    confirmButtonText: "YES!",
+  }).then(async (result) => {
+    if (result.isConfirmed) {
+      await dispatch({ type: "REMOVE_FROM_CART", payload: id });
+      localStorage.setItem(
+        "cart_items",
+        JSON.stringify(getState().cartStore.cart_items)
+      );
+      Swal.fire("Congrats", "Item removed from cart", "success");
+    } else {
+      Swal.fire("action cancelled");
+    }
+  });
+};

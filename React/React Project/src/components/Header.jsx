@@ -13,6 +13,7 @@ import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
 import { useSelector } from "react-redux";
+import { Link } from "@mui/material";
 
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
@@ -20,10 +21,25 @@ function Header() {
   const cart_items = useSelector((store) => store.cartStore.cart_items);
 
   const pages = [
-    "Products",
-    `${cart_items.length > 0 ? `Cart(` + cart_items.length + `)` : `Cart`}`,
-    "Blog",
-    "Contact",
+    {
+      title: "Products",
+      link: "/",
+    },
+
+    {
+      title: `${
+        cart_items.length > 0 ? `Cart(` + cart_items.length + `)` : `Cart`
+      }`,
+      link: "/cart",
+    },
+    {
+      title: "Blog",
+      link: "/blog",
+    },
+    {
+      title: "Contact",
+      link: "/contact",
+    },
   ];
 
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -95,8 +111,12 @@ function Header() {
               sx={{ display: { xs: "block", md: "none" } }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography sx={{ textAlign: "center" }}>{page}</Typography>
+                <MenuItem key={page.title} onClick={handleCloseNavMenu}>
+                  <Link href={page.link}>
+                    <Typography sx={{ textAlign: "center" }}>
+                      {page.title}
+                    </Typography>
+                  </Link>
                 </MenuItem>
               ))}
             </Menu>
@@ -122,13 +142,15 @@ function Header() {
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: "white", display: "block" }}
-              >
-                {page}
-              </Button>
+              <Link href={page.link}>
+                <Button
+                  key={page.title}
+                  onClick={handleCloseNavMenu}
+                  sx={{ my: 2, color: "white", display: "block" }}
+                >
+                  {page.title}
+                </Button>
+              </Link>
             ))}
           </Box>
           <Box sx={{ flexGrow: 0 }}>
