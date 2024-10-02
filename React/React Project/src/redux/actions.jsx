@@ -92,3 +92,9 @@ export const remove_from_cart = (id) => async (dispatch, getState) => {
     }
   });
 };
+
+export const isLoggedIn = () => {
+  return localStorage.getItem("userInfo")
+    ? JSON.parse(localStorage.getItem("userInfo"))
+    : false;
+};

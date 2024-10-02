@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import Layout from "./components/Layout";
 import ProductCard from "./components/ProductCard";
 import Cart from "./pages/Cart";
+import Login from "./pages/Login";
 
 const MyRoutes = () => {
   return (
@@ -13,6 +14,7 @@ const MyRoutes = () => {
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />}></Route>
             <Route path="/cart" element={<Cart />} />
+            <Route path="/login" element={<Login />} />
           </Route>
         </Routes>
       </BrowserRouter>

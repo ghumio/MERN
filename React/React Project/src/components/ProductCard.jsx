@@ -9,34 +9,52 @@ import { Box, Rating } from "@mui/material";
 import { CurrencyRupee, ShoppingCart } from "@mui/icons-material";
 import { useDispatch } from "react-redux";
 import Swal from "sweetalert2";
-import { add_to_cart } from "../redux/actions";
+import { add_to_cart, isLoggedIn } from "../redux/actions";
+import { useNavigate } from "react-router-dom";
 
 export default function ProductCard({ item }) {
   const dispatch = useDispatch();
+  const user = isLoggedIn();
+  const navigate = useNavigate;
 
   const addToCart = () => {
-    let cart_item = {
-      title: item.title,
-      price: item.price,
-      image: item.images[0],
-      stock: item.stock,
-      quantity: 1,
-      id: Date.now(),
-    };
-    Swal.fire({
-      title: "Confirm?",
-      text: "Are you sure, you want to add this to your cart",
-      icon: "question",
-      showCancelButton: true,
-      cancelButtonText: "Cancel",
-      confirmButtonText: "YES!",
-    }).then((result) => {
-      if (result.isConfirmed) {
-        dispatch(add_to_cart(cart_item));
-      } else {
-        Swal.fire("Action Cancelled");
-      }
-    });
+    if (!user) {
+      Swal.fire({
+        title: "Alert!",
+        text: "You need to login first",
+        icon: "warning",
+        showCancelButton: true,
+        cancelButtonText: "Cancel",
+        confirmButtonText: "YES!",
+      }).then((result) => {
+        if (result.isConfirmed) {
+          navigate("/login");
+        }
+      });
+    } else {
+      let cart_item = {
+        title: item.title,
+        price: item.price,
+        image: item.images[0],
+        stock: item.stock,
+        quantity: 1,
+        id: Date.now(),
+      };
+      Swal.fire({
+        title: "Confirm?",
+        text: "Are you sure, you want to add this to your cart",
+        icon: "question",
+        showCancelButton: true,
+        cancelButtonText: "Cancel",
+        confirmButtonText: "YES!",
+      }).then((result) => {
+        if (result.isConfirmed) {
+          dispatch(add_to_cart(cart_item));
+        } else {
+          Swal.fire("Action Cancelled");
+        }
+      });
+    }
   };
 
   return (
