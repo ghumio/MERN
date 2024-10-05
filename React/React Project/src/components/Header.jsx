@@ -16,6 +16,7 @@ import { useSelector } from "react-redux";
 import { Link } from "@mui/material";
 import { isLoggedIn } from "../redux/actions";
 import { useNavigate } from "react-router-dom";
+// import { Login } from "@mui/icons-material";
 
 function Header() {
   const user = isLoggedIn();
@@ -186,6 +187,7 @@ function Header() {
               <Tooltip title="Open settings">
                 <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                   <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
+                  {user.username}
                 </IconButton>
               </Tooltip>
               <Menu
@@ -206,7 +208,10 @@ function Header() {
               >
                 {settings.map((setting) => (
                   <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                    <Typography sx={{ textAlign: "center" }}>
+                    <Typography
+                      sx={{ textAlign: "center" }}
+                      onClick={setting.action}
+                    >
                       {setting.title}
                     </Typography>
                   </MenuItem>

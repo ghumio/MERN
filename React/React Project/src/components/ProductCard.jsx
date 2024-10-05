@@ -15,7 +15,7 @@ import { useNavigate } from "react-router-dom";
 export default function ProductCard({ item }) {
   const dispatch = useDispatch();
   const user = isLoggedIn();
-  const navigate = useNavigate;
+  const navigate = useNavigate();
 
   const addToCart = () => {
     if (!user) {
@@ -23,9 +23,9 @@ export default function ProductCard({ item }) {
         title: "Alert!",
         text: "You need to login first",
         icon: "warning",
+        confirmButtonText: "Login",
         showCancelButton: true,
-        cancelButtonText: "Cancel",
-        confirmButtonText: "YES!",
+        cancelButtonText: "May be later",
       }).then((result) => {
         if (result.isConfirmed) {
           navigate("/login");
